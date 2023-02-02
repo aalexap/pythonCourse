@@ -10,7 +10,7 @@
 #
 # print(f'{days}:{hours}:{minutes}:{minutes}:{sec_and}')
 
-sec = 123423565
+sec = 1234565
 days = sec // 86400
 hours = (sec % 86400) // 3600
 minutes = ((sec % 86400) % 3600) // 60
