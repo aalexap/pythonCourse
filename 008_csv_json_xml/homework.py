@@ -11,7 +11,7 @@ with open('csv_files/2019.csv', 'r', encoding='utf-8') as file:
                                     f"4. Show top {i} countries by Social support\n"
                                     f"5. Show top {i} countries by Healthy life expectancy\n"
                                     f"6. Show top {i} countries by Freedom to make life choices\n"
-                                    f"7. Show top {i} countries byGenerosity\n"
+                                    f"7. Show top {i} countries by Generosity\n"
                                     f"8. Show top {i} countries by Perceptions of corruption\n "))
 
             if user_choice > 8:
@@ -32,11 +32,13 @@ with open('csv_files/2019.csv', 'r', encoding='utf-8') as file:
                         break
                     except ValueError:
                         print("Enter only numbers from 1 to 156")
-            else:
-                social_support = {}
-                for line in csv_reader:
-                    social_support[float(line[user_choice])] = line[1]
 
-                keys_list = sorted(social_support.keys(), reverse=True)
+            else:
+                cat = {}
+                for line in csv_reader:
+                    cat[float(line[user_choice])] = line[1]
+
+                keys_list = sorted(cat.keys(), reverse=True)
                 for key in keys_list[0:i]:
-                    print(social_support.get(key))
+                    print(cat.get(key))
+                print('')
