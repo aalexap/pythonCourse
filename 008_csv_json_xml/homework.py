@@ -42,3 +42,55 @@ with open('csv_files/2019.csv', 'r', encoding='utf-8') as file:
                 for key in keys_list[0:i]:
                     print(cat.get(key))
                 print('')
+
+
+#     CSV reader
+#     happiness_data = list(csv.reader(file))
+#     next(happiness_data)
+#     happiness_data = list(happiness_data)
+#
+# analysis_data = []
+# for line in happiness_data:
+#     analysis_data.append([line[3], line[1]])
+#
+# analysis_data.sort(reverse=True)
+#
+# result = []
+# for line in analysis_data:
+#     if analysis_data.index(line) > 9:
+#         break
+#     result.append(line)
+#
+# for line in result:
+#     print(line[1], line[0])
+#
+#     happines_data = csv.DictReader(file)
+#     next(happines_data)
+#     happines_data = list(happines_data)
+#
+# analysis_data = []
+# for line in happines_data:
+#         analysis_data.append([line['GDP per capita'], line['Country or region']])
+#
+# analysis_data.sort(reverse=True)
+#
+# result[]
+# for line in analysis_data;
+#     if analysis_data.index(line) > 9:
+#         break
+#     result.append(line)
+#
+# for line in result:
+#     print(line[1], line[0])
+
+
+# Lambda
+#     happines_data = csv.reader(file)
+#     next(happines_data)
+#     happines_data = list(happines_data)
+#
+# happines_data.sort(reverse=True, key=lambda value: value[3])
+#
+# for line in happines_data:
+#     if happines_data.index(line) < 9:
+#         print(line)
