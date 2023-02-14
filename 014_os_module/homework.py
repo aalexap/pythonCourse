@@ -1,5 +1,9 @@
 import os
 
+def rep(filename, extension):
+    os.replace(filename, extension + '/' + filename)
+
+
 os.chdir('needs_sorting')
 i = 0
 for filename in os.listdir():
@@ -7,8 +11,8 @@ for filename in os.listdir():
         i += 1
         extension = os.path.splitext(filename)[1][1:]
         if os.path.isdir(extension):
-            os.replace(filename, extension + '/' + filename)
+            rep(filename,extension)
         else:
             os.mkdir(extension)
-            os.replace(filename, extension + '/' + filename)
+            rep(filename, extension)
 print(f'{i} files were found and moved')
