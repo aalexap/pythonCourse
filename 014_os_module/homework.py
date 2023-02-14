@@ -11,7 +11,7 @@ for filename in os.listdir():
         i += 1
         extension = os.path.splitext(filename)[1][1:]
         if os.path.isdir(extension):
-            rep(filename,extension)
+            rep(filename, extension)
         else:
             os.mkdir(extension)
             rep(filename, extension)
